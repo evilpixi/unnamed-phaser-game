@@ -1,0 +1,23 @@
+{
+  "name": "phaser-responsive-demo",
+  "version": "1.0.0",
+  "description": "Starter kit for a responsive Phaser 3 game",
+  "main": "src/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "phaser": "3.90.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "keywords": [
+    "phaser",
+    "game",
+    "responsive"
+  ],
+  "author": "EvilPixi",
+  "license": "MIT"
+}

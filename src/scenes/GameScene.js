@@ -46,6 +46,13 @@ export default class GameScene extends Phaser.Scene {
       //   this.startDialog();
       // }
     });
+
+    this.add.sprite(100, 100, "gems", "gold")
+    this.add.sprite(150, 100, "gems", "gold").setScale(2)
+    this.add.sprite(200, 100, "gems", "gold")
+    this.add.sprite(100, 170, "gems", "ruby")
+    this.add.sprite(150, 170, "gems", "sapphire").setAlpha(0.5)
+    this.add.sprite(200, 170, "gems", "emerald").setScale(0.5, 2)
   }
 
   startDialog(dialogKey) {

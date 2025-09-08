@@ -58,6 +58,7 @@ export default class GameScene extends Phaser.Scene {
   }
 
   update() {
+    const pixi = "asd"
     this.debugText.setText(`Debug Info\nPlayer in Zone: ${this.isPlayerInZone}`);
   }
 }

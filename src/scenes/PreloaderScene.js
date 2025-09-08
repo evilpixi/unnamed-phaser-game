@@ -24,6 +24,8 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image("Sayaka_idle2", "assets/sayaka/Sayaka_idle2.png");
     this.load.image("Sayaka_thinking1", "assets/sayaka/Sayaka_thinking1.png");
     this.load.image("Sayaka_thinking2", "assets/sayaka/Sayaka_thinking2.png");
+
+    this.load.atlas("gems", "assets/atlas_test/gems.png", "assets/atlas_test/gems_atlas.json");
   }
 
   create() {

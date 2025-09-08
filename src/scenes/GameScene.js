@@ -46,6 +46,37 @@ export default class GameScene extends Phaser.Scene {
       //   this.startDialog();
       // }
     });
+
+    // Arrange gem sprites in a circle and set alpha from 0 to 1
+    const gemData = [
+      { frame: "gold", scale: 1 },
+      { frame: "gold", scale: 2 },
+      { frame: "gold", scale: 1 },
+      { frame: "gold", scale: 1 },
+      { frame: "ruby", scale: 1 },
+      { frame: "sapphire", scale: 1 },
+      { frame: "emerald", scale: 0.5, scaleY: 2 }
+    ];
+
+    const centerX = 200;
+    const centerY = 200;
+    const radius = 100;
+    const total = gemData.length;
+    gemData.forEach((gem, i) =>
+    {
+      const angle = (2 * Math.PI * i) / total;
+      const x = centerX + Math.cos(angle) * radius;
+      const y = centerY + Math.sin(angle) * radius;
+      const sprite = this.add.sprite(x, y, "gems", gem.frame);
+      if (gem.scaleY)
+      {
+        sprite.setScale(gem.scale, gem.scaleY);
+      } else
+      {
+        sprite.setScale(gem.scale);
+      }
+      sprite.setAlpha(i / (total - 1));
+    });
   }
 
   startDialog(dialogKey) {
